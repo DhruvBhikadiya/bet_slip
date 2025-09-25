@@ -7,6 +7,13 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Ensure assets resolve from site root on hosted environments (e.g., Vercel) -->
+  <script>
+    // Use <base href="/"> only when not using file:// so /bet/slip/... deep links resolve assets
+    if (location.protocol !== 'file:') {
+      document.write('<base href="/">');
+    }
+  </script>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
