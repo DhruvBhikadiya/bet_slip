@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bet Slip</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Page container to simulate right sidebar bet slip -->
+  <div class="page">
+    <aside class="betslip" role="complementary" aria-label="Bet Slip">
+      <!-- Top action bar -->
+      <div class="betslip__topbar">
+        <button class="link link--muted" id="btnHide" aria-label="Hide bet slip">Hide</button>
+        <div class="betslip__title">
+          <span class="dot"></span>
+          <strong>Bet Slip</strong>
+          <span class="badge" id="slipCount">0</span>
+        </div>
+        <button class="link link--danger" id="btnClear" aria-label="Clear bet slip">Clear</button>
+      </div>
+
+      <!-- Better price bar -->
+      <div class="betslip__pricebar">
+        <span>Better Price</span>
+        <strong id="bestPrice">6.0/7.1</strong>
+      </div>
+
+      <!-- Bookmaker header -->
+      <div class="betslip__bookmaker">
+        <div class="bookmaker__brand">
+          <div class="bookmaker__logo">bet<span>365</span></div>
+        </div>
+        <div class="bookmaker__controls">
+          <button class="btn btn--sm btn--ghost" id="btnChangeBk">Change ▾</button>
+        </div>
+      </div>
+
+      <!-- Sample deeplink for quick testing -->
+      <div class="compare" aria-live="polite">
+        <a href="bet/slip/123456/ind%20VS%20pak/1X2/ind/1.2" class="link">Open bet slip for IND vs PAK (1X2, IND @ 1.2)</a>
+      </div>
+ 
+      <!-- Multi-selection deeplink sample (uses hash so file:// works) -->
+      <div class="compare" aria-live="polite">
+        <a href="#/bet/slip/123456/csk%20VS%20rr/1X2/csk/1.2/789012/ind%20VS%20pak/Over%20Under/Over%201.5/1.85" class="link">
+          Open bet slip for 2 selections (CSK vs RR and IND vs PAK)
+        </a>
+      </div>
+
+      <!-- Auth tabs -->
+      <div class="auth">
+        <button class="auth__tab auth__tab--active" id="tabLogin" aria-selected="true">Log in</button>
+        <button class="auth__tab" id="tabSignup">Sign Up</button>
+      </div>
+
+      <!-- Selections list -->
+      <ul class="selections" id="selections" aria-live="polite">
+        <!-- JS populates items here -->
+      </ul>
+
+      <!-- Comparison link -->
+      <div class="compare">
+        <a href="#" class="link">View comparison grid</a>
+      </div>
+
+      <!-- Auth notice -->
+      <div class="notice notice--info" id="authNotice">
+        Please log in or sign up to view all available multiples
+      </div>
+
+      <!-- Multiple summary -->
+      <div class="multiple" id="multipleSummary">
+        <div class="multiple__name">Double</div>
+        <div class="multiple__price" id="multiplePrice">6.03/1</div>
+        <button class="btn btn--sm btn--ghost" id="btnSetStakeMulti">Set Stake</button>
+      </div>
+
+      <!-- Totals -->
+      <div class="totals">
+        <div class="totals__row">
+          <span>Total Stake:</span>
+          <strong id="totalStake">£0.00</strong>
+        </div>
+        <div class="totals__row">
+          <span>Est. Returns:</span>
+          <strong id="totalReturns">£0.00</strong>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="cta">
+        <button class="btn btn--primary btn--lg" id="btnPlaceBet" disabled>Log in & Place Bet</button>
+        <a href="#" class="link link--muted cta__ext">Bet on bookmaker website</a>
+      </div>
+
+      <!-- Legal footer (small) -->
+      <footer class="betslip__footer">
+        <small>Gamble Responsibly. 18+</small>
+      </footer>
+    </aside>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
