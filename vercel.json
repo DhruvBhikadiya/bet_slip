@@ -1,6 +1,7 @@
 {
   "version": 2,
   "rewrites": [
-    { "source": "/bet/slip/(.*)", "destination": "/index.html" }
+    { "source": "/bet/slip/(.*)", "destination": "/index.html" },
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
