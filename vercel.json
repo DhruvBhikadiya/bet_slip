@@ -1,0 +1,6 @@
+{
+  "version": 2,
+  "rewrites": [
+    { "source": "/bet/slip/(.*)", "destination": "/index.html" }
+  ]
+}
